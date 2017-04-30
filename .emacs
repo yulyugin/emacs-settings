@@ -43,7 +43,9 @@
 (require 'fill-column-indicator)
 (setq fci-rule-column 81)
 (setq fci-rule-color "cyan")
-(add-hook 'after-change-major-mode-hook 'fci-mode)
+(add-hook 'c-mode-hook 'fci-mode)
+(add-hook 'c++-mode-hook 'fci-mode)
+(add-hook 'latex-mode-hook 'fci-mode)
 
 ;; Always highlights parenthesis
 (setq show-paren-delay 0
