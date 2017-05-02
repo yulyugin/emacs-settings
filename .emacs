@@ -58,3 +58,11 @@
 (setq show-paren-delay 0
       show-paren-style 'parenthesis)
 (show-paren-mode 1)
+
+;; Save backup files to /tmp/emacs-backup folder
+(setq backup-directory-alist '(("." . "/tmp/emacs-backup")))
+(setq make-backup-files t
+      kept-new-verstions 6
+      kept-old-verstions 3
+      version-control t
+      delete-old-versions t)
