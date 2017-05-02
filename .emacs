@@ -37,6 +37,9 @@
 (global-set-key (kbd "S-<up>") 'windmove-up)
 (global-set-key (kbd "S-<down>") 'windmove-down)
 
+(global-set-key (kbd "C-n") 'next-error)
+(global-set-key (kbd "C-p") 'previous-error)
+
 ;; Tabs as spaces
 (setq-default indent-tabs-mode nil)
 
