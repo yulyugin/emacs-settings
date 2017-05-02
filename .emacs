@@ -69,3 +69,5 @@
 
 ;; Scrolling settings
 (setq scroll-conservatively 100)
+
+(global-set-key (kbd "<f12>") 'compile)
