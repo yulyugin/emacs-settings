@@ -21,6 +21,7 @@
 
 (load-theme 'wombat t)
 
+;; Ctags
 (setq path-to-ctags "/usr/bin/ctags")
 
 (defun create-tags (dir-name)
@@ -30,16 +31,19 @@
    (format "%s -f %s/TAGS -e -R %s" path-to-ctags dir-name dir-name))
  )
 
+;; Navigation
 (global-set-key (kbd "S-<left>") 'windmove-left)
 (global-set-key (kbd "S-<right>") 'windmove-right)
 (global-set-key (kbd "S-<up>") 'windmove-up)
 (global-set-key (kbd "S-<down>") 'windmove-down)
 
+;; Tabs as spaces
 (setq-default indent-tabs-mode nil)
 
 (let ((default-directory  "~/.emacs.d/lisp/"))
   (normal-top-level-add-subdirs-to-load-path))
 
+;; 81 line mark
 (require 'fill-column-indicator)
 (setq fci-rule-column 81)
 (setq fci-rule-color "cyan")
