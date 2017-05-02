@@ -66,3 +66,6 @@
       kept-old-verstions 3
       version-control t
       delete-old-versions t)
+
+;; Scrolling settings
+(setq scroll-conservatively 100)
