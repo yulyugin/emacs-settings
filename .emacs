@@ -45,6 +45,9 @@
 ;; Tabs as spaces
 (setq-default indent-tabs-mode nil)
 
+;; Indentation
+(setq-default c-basic-offset 8)
+
 (let ((default-directory  "~/.emacs.d/lisp/"))
   (normal-top-level-add-subdirs-to-load-path))
 
