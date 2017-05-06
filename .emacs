@@ -50,6 +50,7 @@
 
 (let ((default-directory  "~/.emacs.d/lisp/"))
   (normal-top-level-add-subdirs-to-load-path))
+(add-to-list 'load-path "~/.emacs.d/lisp")
 
 ;; 81 line mark
 (require 'fill-column-indicator)
@@ -76,3 +77,5 @@
 (setq scroll-conservatively 100)
 
 (global-set-key (kbd "<f12>") 'compile)
+
+(require 'diary)
