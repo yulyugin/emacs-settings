@@ -10,4 +10,4 @@ $rm_f ~/.emacs.d/ispell
 
 ln -s $script_path/.emacs ~/
 ln -s $script_path/.emacs.d/lisp ~/.emacs.d/
-ln -s $script_path/ispell ~/.emacs.d/
+ln -s $script_path/.emacs.d/ispell ~/.emacs.d/
