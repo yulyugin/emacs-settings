@@ -79,3 +79,13 @@
 (global-set-key (kbd "<f12>") 'compile)
 
 (require 'diary)
+
+;; Spelling
+(setq ispell-personal-dictionary "~/.emacs.d/ispell/ru_RU")
+
+(defun setup-russian-spelling ()
+  "Setup russian spell checks"
+  (flyspell-mode
+   (ispell-change-dictionary "russian")))
+
+(add-hook 'latex-mode-hook 'setup-russian-spelling)
