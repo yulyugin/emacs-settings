@@ -80,12 +80,12 @@
 
 (require 'diary)
 
-;; Spelling
+; Spelling
+(require 'ispell)
+
 (setq ispell-personal-dictionary "~/.emacs.d/ispell/ru_RU")
+(setq ispell-program-name "hunspell"
+      ispell-dictionary   "russian")
 
-(defun setup-russian-spelling ()
-  "Setup russian spell checks"
-  (flyspell-mode
-   (ispell-change-dictionary "russian")))
-
-(add-hook 'latex-mode-hook 'setup-russian-spelling)
+(add-hook 'latex-mode-hook 'flyspell-mode)
+(add-hook 'tex-mode-hook 'flyspell-mode)
