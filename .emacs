@@ -59,6 +59,7 @@
 (add-hook 'c-mode-hook 'fci-mode)
 (add-hook 'c++-mode-hook 'fci-mode)
 (add-hook 'latex-mode-hook 'fci-mode)
+(add-hook 'tex-mode-hook 'fci-mode)
 
 ;; Always highlights parenthesis
 (setq show-paren-delay 0
