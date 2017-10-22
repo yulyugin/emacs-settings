@@ -54,7 +54,7 @@
 
 ;; 81 line mark
 (require 'fill-column-indicator)
-(setq fci-rule-column 81)
+(setq fci-rule-column 80)
 (setq fci-rule-color "cyan")
 (add-hook 'c-mode-hook 'fci-mode)
 (add-hook 'c++-mode-hook 'fci-mode)
