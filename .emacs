@@ -90,3 +90,6 @@
 
 (add-hook 'latex-mode-hook 'flyspell-mode)
 (add-hook 'tex-mode-hook 'flyspell-mode)
+
+;; Prevent emacs from exiting once the exit procedure has been initiated
+(setq confirm-kill-emacs 'y-or-n-p)
