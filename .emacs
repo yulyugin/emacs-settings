@@ -13,7 +13,8 @@
  '(custom-safe-themes
    (quote
     ("0959ef29a88d1c1ed30369d60352a6a4504ca985a3d6cd5b165797500679ee55" default)))
- '(inhibit-startup-screen t))
+ '(inhibit-startup-screen t)
+ '(safe-local-variable-values (quote ((c-indentation-style . linux)))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -21,7 +22,11 @@
  ;; If there is more than one, they won't work right.
  )
 
-(load-theme 'wombat t)
+(ignore-errors load-theme 'wombat t)
+
+;; Save compilation commands over session (and possibly other stuff too)
+(require 'savehist)
+(savehist-mode 1)
 
 ;; Ctags
 (setq path-to-ctags "/usr/bin/ctags")
@@ -93,3 +98,5 @@
 
 ;; Prevent emacs from exiting once the exit procedure has been initiated
 (setq confirm-kill-emacs 'y-or-n-p)
+
+(put 'downcase-region 'disabled nil)
